@@ -15,3 +15,7 @@ builds:
 #      - windows
       - darwin
 #      - linux
+    env:
+      - CGO_ENABLED=0
+    flags:
+      - -mod=mod
