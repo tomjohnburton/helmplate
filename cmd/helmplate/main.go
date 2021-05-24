@@ -5,7 +5,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/tomjohnburton/helmplate/create"
+	"tomjohnburton/helmplate/create"
 )
 
 func main() {
@@ -25,12 +25,16 @@ func main() {
 					Required:    true,
 					TakesFile:   true,
 				},
+				cli.StringFlag{
+					Name: "name",
+					Usage: "Customize name of the resource",
+					Required: false,
+				},
 			},
 			Action: func(c *cli.Context) error {
+				create.Create(c.Args().Get(0), c.String("chart"), c.String("name"))
 				return nil
 			},
-
-
 
 		},
 	}
