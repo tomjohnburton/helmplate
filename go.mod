@@ -3,9 +3,12 @@ module tomjohnburton/helmplate
 go 1.16
 
 require (
-	github.com/pkg/errors v0.9.1
+	github.com/cpuguy83/go-md2man/v2 v2.0.0 // indirect
+	github.com/kr/text v0.2.0 // indirect
+	github.com/niemeyer/pretty v0.0.0-20200227124842-a10e7caefd8e // indirect
 	github.com/urfave/cli v1.22.5
-	helm.sh/helm/v3 v3.6.0-rc.1
+	gopkg.in/check.v1 v1.0.0-20200227125254-8fa46927fb4f // indirect
+	gopkg.in/yaml.v2 v2.4.0 // indirect
 	sigs.k8s.io/yaml v1.2.0
 )
 
