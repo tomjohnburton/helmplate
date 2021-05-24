@@ -25,4 +25,3 @@ builds:
       - -mod=vendor
 
 release:
-  name_template: "{{.ProjectName}}-{{.Os}}-v{{.Tag}}"
