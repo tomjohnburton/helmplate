@@ -5,6 +5,9 @@ env:
   - CGO_ENABLED=0
   - GOFLAGS=-mod=vendor
   - GO111MODULE=auto
+before:
+  hooks:
+    - go mod tidy
 
 builds:
   - id: helmplate
@@ -18,4 +21,8 @@ builds:
     env:
       - CGO_ENABLED=0
     flags:
-      - -mod=mod
+      - -mod=vendor
+
+release:
+  draft: true
+  name_template: "{{.ProjectName}}-{{.Os}}-v{{.Version}}"
