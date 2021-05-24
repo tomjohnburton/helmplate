@@ -25,5 +25,4 @@ builds:
       - -mod=vendor
 
 release:
-  draft: true
-  name_template: "{{.ProjectName}}-{{.Os}}-v{{.Version}}"
+  name_template: "{{.ProjectName}}-{{.Os}}-v{{.Tag}}"
